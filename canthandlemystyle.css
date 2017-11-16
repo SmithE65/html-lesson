@@ -1,0 +1,34 @@
+﻿body {
+    background-color: lightgray;
+    font-size: 16pt;
+    margin: 20px;
+}
+
+thead {
+    font-size: 22pt;
+}
+
+td {
+    padding: 15px;
+}
+
+div.menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: black;
+    color: lightgrey;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+a.menuItem
+{
+    color: lightgray;
+    display: inline-block;
+}
+
+a.menuItem:visited {
+    color: lightgray;
+}

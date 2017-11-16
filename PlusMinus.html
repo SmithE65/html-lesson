@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Plus/Minus</title>
+
+    <link href="canthandlemystyle.css" type="text/css" rel="stylesheet" />
+
+    <style>
+        button /* common style for all buttons */
+        {
+            font-size: 32pt;
+            width: 30%;     /* All buttons scale with screen width now */
+            text-align: center;
+            border: 3px solid black;
+            padding-top: 10%;   /* Make a pleasing aspect ratio */
+            padding-bottom: 10%;
+            position: relative;
+        }
+
+        button:hover    /* make the border white when the mouse is over the button */
+        {
+            border-color: white;
+        }
+
+        .minusButton    /* minus button specific styles */
+        {
+            background-color: red;
+        }
+
+        .plusButton     /* plus button specific styles */
+        {
+            background-color: green;
+        }
+
+        .display        /* display box specific styles */
+        {
+            background-color: white;
+        }
+    </style>
+
+    <script>
+        var number = 0;
+
+        function inc()  // Increment the number
+        {
+            number++;   // Make the number bigger
+            display();  // Display it
+        }
+
+        function dec()  // Decrement the number
+        {
+            number--;   // Make the number smaller
+            display();  // Display it
+        }
+
+        function display()
+        {
+            var display = document.getElementById("display");   // Get our display box
+            display.textContent = number;                       // Put the number in the display box
+            setColor();                                         // Change the color
+        }
+
+        function setColor() // Sets the color depending on whether the number is even, odd, or zero
+        {
+            var display = document.getElementById("display");
+
+            if (number == 0) {                  // Zero is black
+                display.style.color = "black";
+            }
+            else if (!(number % 2)) {           // Even is red (%2 is zero for even #s and !0 is true in js)
+                display.style.color = "red";
+            }
+            else {                              // If all else fails, we must be odd... right???
+                display.style.color = "blue";
+            }
+        }
+    </script>
+</head>
+<body>
+    <button class="minusButton" onclick="dec()">-</button>
+    <button class="display" id="display">0</button>
+    <button class="plusButton" onclick="inc()">+</button>
+    <br /><br /><br />
+    <a href="index.html">Back to HOME PAGE.</a>
+</body>
+</html>

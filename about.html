@@ -4,22 +4,63 @@
 <head>
     <meta charset="utf-8" />
     <title>About Me</title>
+
+    <style>
+        body { background-color: lightgray; font-size: 16pt; margin: 20px; }
+        thead { font-size: 22pt; }
+        td { padding: 15px; }
+
+        div.menu {
+            position: fixed;
+            left: 0;
+            top: 0;
+            background-color: black;
+            color: lightgrey;
+            width: 100%;
+            padding: 20px;
+        }
+        div.clearfix {
+            content: "";
+            clear: both;
+            display: table;
+            margin: 15px;
+            border: solid;
+            border-color: blue;
+            padding: 6px;
+        }
+        a:visited {
+            color: red;
+        }
+    </style>
 </head>
 <body>
-    Back to <a href="file:///C:/repos/html-lesson/HelloWorld.html">Hello World</a>.
-    <p>
-        Eric Smith<br />
-        9493 Longren Ct.<br />
-        Cincinnati, OH 45242<br />
-        01-513-984-4276<br />
-        smith.ericdavid@gmail.com
-    </p><br />
+    <div class="menu">
+        <a href="file:///C:/repos/html-lesson/HelloWorld.html">HOME</a>
+        <div style="float: right; margin-right: 45px;">
+            ABOUT ME
+        </div>
+    </div>
+    <br /><br />
 
-    <h4>What I did before bootcamp:</h4>
+    <div class="clearfix">
+        <div style="border: solid; border-color: red; height: 320px;">
+            Eric Smith<br />
+            9493 Longren Ct.<br />
+            Cincinnati, OH 45242<br />
+            01-513-984-4276<br />
+            smith.ericdavid@gmail.com
+        </div>
+        <div style="border: solid; border-color: red; height: 320px;">
+            <img src="picture.jpg" alt="A picture of me."" />
+        </div>
+    </div>
+
+    <br />
+    <h3>What I did before bootcamp:</h3>
     <p>PUT AN ANSWER HERE</p>
-    <h4>Why I chose a bootcamp:</h4>
+    <h3>Why I chose a bootcamp:</h3>
     <p>PUT AN ANSWER HERE</p>
-    <h4>Where I want to work after bootcamp:</h4>
+    <h3>Where I want to work after bootcamp:</h3>
     <p>Anywhere with decent pay and a good work environment.  Overseas would be nice.</p>
 </body>
 </html>
